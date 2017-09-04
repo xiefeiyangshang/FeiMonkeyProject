@@ -1,0 +1,73 @@
+10
+
+dir
+2424
+svn://svn.whaty.com/xmkfb/apps/whatymoocguopei/trunk/mooc-guopei/src/main/res
+svn://svn.whaty.com/xmkfb
+
+
+
+2017-08-23T07:26:16.258066Z
+2386
+wangyabin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+db0c8573-406a-4f3e-8ec1-2eeebe9d876a
+
+anim
+dir
+
+drawable
+dir
+
+drawable-hdpi
+dir
+
+drawable-ldpi
+dir
+
+drawable-mdpi
+dir
+
+drawable-xhdpi
+dir
+
+drawable-xxhdpi
+dir
+
+layout
+dir
+
+menu
+dir
+
+mipmap-hdpi
+dir
+
+mipmap-mdpi
+dir
+
+mipmap-xhdpi
+dir
+
+mipmap-xxhdpi
+dir
+
+values
+dir
+
+values-w820dp
+dir
+

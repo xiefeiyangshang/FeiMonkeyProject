@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:descendantFocusability="blocksDescendants" >
+
+    <RelativeLayout
+        android:id="@id/controll_layout"
+        android:layout_width="@dimen/mooc_50_dp"
+        android:layout_height="@dimen/mooc_50_dp"
+        android:layout_alignParentRight="true"
+        android:gravity="center" >
+
+        <ImageView
+            android:id="@id/download_controll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/download_status_bg" />
+
+        <ImageView
+            android:id="@id/check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/mooc_10_dp"
+            android:background="@drawable/download_check_bg"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@id/download_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="@dimen/mooc_13_dp"
+        android:layout_toLeftOf="@id/controll_layout" >
+
+        <TextView
+            android:id="@id/media_size"
+            style="@style/SectionSizeTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/mooc_17_dp"
+            android:text="15M/20M" />
+
+        <TextView
+            android:id="@id/name"
+            style="@style/SectionNameTextStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mooc_15_dp"
+            android:layout_toLeftOf="@id/media_size"
+            android:singleLine="true" />
+
+        <SeekBar
+            android:id="@id/mSeekbar"
+            android:layout_width="fill_parent"
+            android:layout_height="4.0px"
+            android:layout_below="@id/media_size"
+            android:layout_marginTop="@dimen/mooc_4_dp"
+            android:max="100"
+            android:progress="50"
+            android:progressDrawable="@drawable/download_seekbar_drawable"
+            android:thumb="@android:color/transparent" />
+    </RelativeLayout>
+
+</RelativeLayout>

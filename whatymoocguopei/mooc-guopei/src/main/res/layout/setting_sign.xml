@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+	
+	<com.whatyplugin.imooc.ui.view.BaseTitleView
+        android:id="@id/rl_titile"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/mooc_48_dp"
+        app:middle_title="@string/sign_edit_lable"
+        app:righttext="@string/submit"
+        />
+    <RelativeLayout
+        android:id="@+id/setting_user_sign_value"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/sign"
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/ViewIV"
+            android:layout_alignRight="@+id/ViewIV"
+            android:layout_marginTop="10dp"
+            android:background="@null"
+            android:inputType="textMultiLine"
+            android:maxLines="7"
+            android:minLines="1"
+            android:textCursorDrawable="@null"
+            android:color="#ffffff" />
+
+        <ImageView
+            android:id="@+id/ViewIV"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sign"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/input" />
+    </RelativeLayout>
+
+</LinearLayout>

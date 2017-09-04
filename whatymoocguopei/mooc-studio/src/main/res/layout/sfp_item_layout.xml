@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:layout_gravity="center"
+    android:gravity="center" >
+
+    <RelativeLayout
+        style="@style/fillx"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp" >
+
+        <ImageView
+            android:id="@+id/iv_node_image"
+            style="@style/wrap"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:src="@drawable/sfp_node_normal" />
+
+        <TextView
+            android:id="@+id/tv_node_name"
+            style="@style/sfp_item_name"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/iv_node_image"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="台湾历史文化" />
+
+        <TextView
+            android:id="@+id/tv_node_time"
+            style="@style/wrap"
+            android:layout_alignParentRight="true"
+            android:text="02:22:22"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+</RelativeLayout>

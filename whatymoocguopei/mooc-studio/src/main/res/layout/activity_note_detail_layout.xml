@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    >
+	<com.whatyplugin.imooc.ui.view.BaseTitleView
+        android:id="@id/rl_titile"
+        android:layout_width="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_height="@dimen/mooc_48_dp"
+        app:middle_title="@string/course_notedetail_label"
+        app:rightimgicon="@drawable/delete"
+        />
+    <RelativeLayout
+        android:id="@id/bottom_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="13dp"
+        android:layout_marginRight="13dp"
+         >
+
+        <ImageView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/note_edit"
+            android:id="@id/iv_edit"
+            android:visibility="invisible"
+            android:layout_alignParentRight="true"
+            />
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_18_size"
+            android:textColor="@color/theme_color"
+            android:text="提交"
+            android:layout_alignParentRight="true"
+            android:visibility="gone"
+            android:id="@id/tv_commit"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@id/note_detail_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/bottom_layout"
+        android:layout_below="@id/note_detail_title"
+        android:layout_marginTop="@dimen/mooc_48_dp"
+        android:fadingEdge="none"
+        android:overScrollMode="never"
+        android:scrollbars="none" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <!-- com.whatyplugin.imooc.ui.view.MCHeadImageView -->
+            <RelativeLayout
+                android:id="@id/fltime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/mooc_13_dp"
+                android:layout_marginTop="@dimen/mooc_10_dp" >
+
+                <ImageView
+                    android:id="@id/iv_recmd"
+                    android:layout_width="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/question_teacher_recommend" />
+
+                <TextView
+                    android:id="@id/note_time"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="@dimen/text_14_size"
+                    android:textColor="@color/theme_color"
+                    android:layout_below="@id/iv_recmd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2015.12.12" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/mooc_5_dp"
+                android:layout_marginTop="@dimen/mooc_15_dp"
+                android:layout_marginLeft="@dimen/mooc_13_dp"
+                android:layout_toLeftOf="@id/fltime"
+                android:id="@id/rl_content"
+                 >
+
+                <TextView
+                    android:id="@id/note_name"
+                    style="@style/ChapterNameTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginRight="@dimen/mooc_5_dp"
+                    android:drawablePadding="@dimen/mooc_7_dp"
+                    android:ellipsize="end"
+                    android:gravity="left"
+                    android:singleLine="true"
+                    android:text="笔记名称" />
+                <TextView
+                    android:id="@id/note_user_name"
+                    style="@style/NickNameTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@id/note_name"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginRight="@dimen/mooc_5_dp"
+                    android:layout_marginTop="@dimen/mooc_5_dp"
+                    android:drawablePadding="@dimen/mooc_7_dp"
+                    android:ellipsize="end"
+                    android:gravity="left"
+                    android:singleLine="true"
+                    android:text="liubin@whaty.com" />
+
+            </RelativeLayout>
+			 <View
+                style="@style/GuidanceLineStyle"
+                android:layout_width="fill_parent"
+                android:layout_below="@id/rl_content" 
+                android:layout_marginLeft="@dimen/mooc_10_dp"
+                android:layout_marginRight="@dimen/mooc_10_dp"
+                android:layout_marginTop="@dimen/mooc_10_dp"
+                />
+            <RelativeLayout
+                android:id="@id/note_content_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@id/rl_content"
+                android:layout_marginBottom="@dimen/mooc_10_dp"
+                android:layout_marginLeft="@dimen/mooc_13_dp"
+                android:layout_marginRight="@dimen/mooc_13_dp"
+                android:layout_marginTop="@dimen/mooc_13_dp" >
+
+                 <TextView
+                    android:id="@id/tv_content"
+                    style="@style/SectionNameTextStyle"
+                    android:layout_width="fill_parent"
+                    android:background="@null"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/mooc_7_dp" />
+                <EditText
+                    android:id="@id/note_content"
+                    style="@style/SectionNameTextStyle"
+                    android:layout_width="fill_parent"
+                    android:background="@null"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/mooc_7_dp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

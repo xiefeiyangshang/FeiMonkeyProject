@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/transparent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="@dimen/mooc_300_dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@id/text1"
+            style="@style/PersonTextStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/mooc_50_dp"
+            android:gravity="center" />
+
+        <View
+            style="@style/PersonLineStyle"
+            android:layout_width="fill_parent" />
+
+        <TextView
+            android:id="@id/text2"
+            style="@style/PersonTextStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/mooc_50_dp"
+            android:gravity="center" />
+
+        <View
+            style="@style/PersonLineStyle"
+            android:layout_width="fill_parent" />
+
+        <TextView
+            android:id="@id/text3"
+            style="@style/PersonTextStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/mooc_50_dp"
+            android:gravity="center" />
+    </LinearLayout>
+
+</LinearLayout>

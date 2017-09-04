@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mooc="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@id/space_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/mooc_17_dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/sdcard_space_bg_color" >
+
+        <ImageView
+            android:id="@id/used_img"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:background="@color/theme_color" />
+
+        <TextView
+            android:id="@id/sdcard_space"
+            style="@style/SdcardSpaceTextStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/mooc_20_dp"
+            android:gravity="center_vertical" />
+    </RelativeLayout>
+
+    <com.whatyplugin.uikit.refreshview.MCPullToRefreshView
+        android:id="@id/mListView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/space_layout"
+        mooc:allowFooterPull="false"
+        mooc:allowHeaderPull="false"
+        mooc:allowSwipe="false"
+        mooc:supportLoadMore="false" />
+
+</RelativeLayout>

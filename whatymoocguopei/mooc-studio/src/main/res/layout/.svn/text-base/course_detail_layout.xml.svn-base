@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fadingEdge="none"
+    android:overScrollMode="never"
+    android:scrollbars="none" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@id/course_name"
+            style="@style/ChapterNameTextStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="@dimen/mooc_13_dp" 
+            android:visibility="gone"
+            />
+
+        <View
+            style="@style/GuidanceLineStyle"
+            android:layout_width="fill_parent"
+            android:visibility="gone"
+             />
+
+        <LinearLayout
+            android:id="@id/courseinfo_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/mooc_50_dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/mooc_10_dp"
+                    android:src="@drawable/chapter_now_icon" />
+
+                <TextView
+                    android:id="@id/chapter_name"
+                    style="@style/ChapterNameTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/course_info_label" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@id/course_info"
+                style="@style/SectionNameTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/mooc_12_dp" />
+        </LinearLayout>
+
+        <View
+            style="@style/GuidanceLineStyle"
+            android:layout_width="fill_parent" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/mooc_5_dp" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/mooc_50_dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/mooc_10_dp"
+                    android:src="@drawable/chapter_now_icon" />
+
+                <TextView
+                    style="@style/ChapterNameTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/teacher_label" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@id/teacher_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <TextView
+                android:id="@id/no_info"
+                style="@style/SectionNameTextStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/no_teacher_info_label"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <View
+            style="@style/GuidanceLineStyle"
+            android:layout_width="fill_parent" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/mooc_5_dp" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/mooc_50_dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/mooc_10_dp"
+                    android:src="@drawable/chapter_now_icon" />
+
+                <TextView
+                    style="@style/ChapterNameTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/course_target_label" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/target_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <TextView
+                android:id="@+id/target_info"
+                style="@style/SectionNameTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/mooc_12_dp" 
+                android:gravity="left" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

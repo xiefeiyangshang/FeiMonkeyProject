@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ukplugin.co.senab.photoview.KeyboardRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    style="@style/fillall" >
+
+    <com.whatyplugin.imooc.ui.view.BaseTitleView
+        android:id="@id/rl_titile"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/mooc_48_dp"
+        app:middle_title="作业"
+        app:righttext="@string/submit" />
+
+    <ScrollView
+        android:id="@+id/scorll_view"
+        style="@style/wrap"
+        android:layout_below="@id/title_layout"
+        android:layout_marginTop="@dimen/mooc_48_dp"
+        android:paddingBottom="@dimen/mooc_55_dp" >
+
+        <RelativeLayout style="@style/fillx" >
+
+            <RelativeLayout
+                android:id="@+id/top_content"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/mooc_12_dp"
+                android:paddingRight="@dimen/mooc_12_dp"
+                android:paddingTop="@dimen/mooc_12_dp" >
+
+                <ImageView
+                    android:id="@+id/status_img"
+                    style="@style/wrap"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/homework_left_green" />
+
+                <TextView
+                    android:id="@+id/content_label"
+                    style="@style/homework_title_style"
+                    android:paddingLeft="@dimen/mooc_22_dp" />
+
+                <ImageView
+                    android:id="@+id/time_img"
+                    style="@style/wrap"
+                    android:layout_below="@id/content_label"
+                    android:paddingLeft="@dimen/mooc_22_dp"
+                    android:paddingTop="@dimen/mooc_12_dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/homework_time" />
+
+                <TextView
+                    android:id="@+id/time_label"
+                    style="@style/homework_content_style"
+                    android:layout_below="@id/content_label"
+                    android:layout_toRightOf="@id/time_img"
+                    android:paddingLeft="@dimen/mooc_12_dp"
+                    android:paddingTop="@dimen/mooc_12_dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/time_label"
+                    android:orientation="vertical"
+                    android:paddingLeft="22dp"
+                    android:paddingTop="@dimen/mooc_12_dp" >
+
+                    <WebView
+                        android:id="@+id/detail_label"
+                        style="@style/homework_content_style" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/middle_line"
+                style="@style/GuidanceLineStyle"
+                android:layout_width="fill_parent"
+                android:layout_below="@id/top_content" />
+
+            <com.whatyplugin.imooc.ui.view.ContainsEmojiEditText
+                android:id="@+id/answer_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/middle_line"
+                android:layout_margin="@dimen/mooc_10_dp"
+                android:background="@null"
+                android:gravity="top"
+                android:hint="请输入你的答案"
+                android:lines="6"
+                android:padding="@dimen/mooc_5_dp"
+                android:textColor="@color/text_color_gray" />
+
+            <LinearLayout
+                android:id="@+id/pic_linearlayout"
+                style="@style/fillx"
+                android:layout_below="@id/answer_label"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/mooc_20_dp"
+                android:paddingRight="@dimen/mooc_20_dp"
+                android:paddingTop="@dimen/mooc_50_dp" >
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <com.whatyplugin.imooc.ui.view.ChoicePicFromLocalView
+        android:id="@+id/choic_carme_pic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+    </com.whatyplugin.imooc.ui.view.ChoicePicFromLocalView>
+
+</ukplugin.co.senab.photoview.KeyboardRelativeLayout>

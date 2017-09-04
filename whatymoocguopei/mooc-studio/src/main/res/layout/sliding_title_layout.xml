@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/mooc_48_dp"
+    android:background="@color/theme_color" >
+
+    <!-- 左侧菜单的 -->
+
+    <ImageView
+        android:id="@id/left_img"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:src="@drawable/menu" />
+
+    <TextView
+        android:id="@+id/right_title_tv"
+        style="@style/SlidingTitleTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="center|right"
+        android:paddingRight="10dp"
+        android:text="BBBBBBB"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+    <!-- 右侧的搜索 -->
+
+    <ImageView
+        android:id="@id/right_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/mooc_10_dp"
+        android:gravity="center"
+        android:src="@drawable/search" />
+
+    <!-- 中间的文本、及上下箭头 -->
+
+    <LinearLayout
+        android:id="@id/mid_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/mooc_10_dp"
+        android:paddingRight="@dimen/mooc_10_dp" >
+
+        <TextView
+            android:id="@id/mid_tv"
+            style="@style/SlidingTitleTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:text="AAAAAAAAAA" />
+
+        <ImageView
+            android:id="@id/arrow_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/mooc_10_dp"
+            android:src="@drawable/course_type_arrowdown"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</RelativeLayout>

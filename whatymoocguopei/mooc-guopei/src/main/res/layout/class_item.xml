@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/mooc_3_dp"
+    android:background="@color/gray_color">
+
+    <RelativeLayout
+        android:paddingBottom="@dimen/mooc_10_dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="班级1"
+            android:textSize="@dimen/text_20_size"
+            android:id="@+id/class_name"/>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

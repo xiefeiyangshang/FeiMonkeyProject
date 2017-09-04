@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootview"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <com.whatyplugin.imooc.ui.view.BaseTitleView
+        android:id="@id/rl_titile"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/mooc_48_dp"
+        app:middle_title="@string/theme_talk" />
+
+    <com.whatyplugin.imooc.ui.view.CustomScrollView
+        android:id="@+id/mScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            style="@style/fillall"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/foruminforoot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/foruminfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:animateLayoutChanges="true"
+                    android:background="#ffffff" >
+
+                    <ImageView
+                        android:id="@+id/foruminfo_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:src="@drawable/message_ico" />
+
+                    <TextView
+                        android:id="@+id/foruminfo_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_toRightOf="@id/foruminfo_img"
+                        android:text="收复台湾的人都是那些"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                    <WebView
+                        android:id="@+id/foruminfo_body"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@id/foruminfo_title"
+                        android:layout_below="@id/foruminfo_title"
+                        android:layout_marginTop="5dp"
+                        android:textColor="#666666"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/foruminfo_body"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/foruminfo_timecode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="起止日期："
+                            android:textColor="#ADB3B8"
+                            android:textStyle="italic" />
+
+                        <TextView
+                            android:id="@+id/foruminfo_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2015.3.21-2015.4.31"
+                            android:textColor="#ADB3B8"
+                            android:textStyle="italic" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/view_pager_container"
+                style="@style/fillall"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/foruminfo_tar"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dp"
+                    android:background="#F7F7F7" >
+
+                    <LinearLayout
+                        android:id="@+id/foruminfo_topic_bar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/foruminfo_topic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="11dp"
+                            android:gravity="center"
+                            android:text="精华："
+                            android:textColor="#8C959B"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/foruminfo_topic_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="8dp"
+                            android:gravity="center"
+                            android:textColor="@color/textcolor"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/foruminfo_reply_bar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_toRightOf="@id/foruminfo_topic_bar"
+                        android:background="#FFe3dfdf"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/foruminfo_repyly"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="11dp"
+                            android:text="回帖："
+                            android:textColor="#8C959B"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/foruminfo_repylynum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="8dp"
+                            android:textColor="@color/textcolor"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/foruminfo_senddiscuss"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="7dp"
+                        android:background="@drawable/onclick_foruminfo"
+                        android:paddingBottom="4dp"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:paddingTop="4dp"
+                        android:text="参与讨论"
+                        android:textColor="#ffffff"
+                        android:textSize="17sp" />
+                </RelativeLayout>
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/foruminfo_vp_repyly"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="#f9f9f9" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.whatyplugin.imooc.ui.view.CustomScrollView>
+
+</LinearLayout>

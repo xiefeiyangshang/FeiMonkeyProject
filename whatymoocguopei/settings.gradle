@@ -1,0 +1,1 @@
+include ':mooc-guopei', ':mooc-studio', ':mooc-mediaplayer'

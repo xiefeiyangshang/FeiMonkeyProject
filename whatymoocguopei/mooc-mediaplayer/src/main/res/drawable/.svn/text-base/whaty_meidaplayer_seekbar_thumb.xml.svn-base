@@ -1,0 +1,14 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:bottom="7.5dp"
+        android:left="7.5dp"
+        android:right="7.5dp"
+        android:top="7.5dp">
+        <shape android:shape="oval">
+            <size
+                android:width="10dp"
+                android:height="10dp" />
+            <solid android:color="#FFFFFF" />
+        </shape>
+    </item>
+</layer-list><!-- From: file:/D:/jinmingli_workdir/WhatyMediaPlayer/whaty_media_player/src/main/res/drawable/whaty_meidaplayer_seekbar_thumb.xml -->

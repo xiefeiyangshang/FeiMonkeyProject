@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/transparent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="@dimen/mooc_270_dp"
+        android:layout_height="fill_parent"
+        android:background="@drawable/corners_webtrn"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@id/title"
+            style="@style/UserNameTextStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mooc_10_dp"
+            android:gravity="center"
+            android:text="@string/update_dialog_title"
+            android:textColor="@color/theme_color" />
+
+        <TextView
+            android:id="@id/content"
+            style="@style/MyCourseShareTextStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mooc_25_dp"
+            android:gravity="left"
+            android:paddingLeft="@dimen/mooc_15_dp"
+            android:paddingRight="@dimen/mooc_15_dp"
+            android:text="@string/update_dialog_content"
+            android:textColor="@android:color/black" />
+
+        <SeekBar
+            android:id="@id/upgrade_progress"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/progress_height"
+            android:layout_marginTop="@dimen/mooc_25_dp"
+            android:max="100"
+            android:paddingLeft="@dimen/mooc_15_dp"
+            android:paddingRight="@dimen/mooc_15_dp"
+            android:progressDrawable="@drawable/upgrade_seekbar_drawable"
+            android:thumb="@android:color/transparent" />
+
+        <View
+            android:id="@id/line2"
+            style="@style/SelectStyle"
+            android:layout_width="fill_parent"
+            android:layout_centerHorizontal="true" 
+            android:layout_marginTop="@dimen/mooc_25_dp" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/mooc_7_dp" >
+
+            <TextView
+                android:id="@id/update_cancel"
+                style="@style/MyCourseShareTextStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:padding="@dimen/mooc_4_dp"
+                android:text="@string/update_cancel" 
+                android:textColor="@android:color/black"/>
+
+            <View
+                style="@style/SelectStyle"
+                android:layout_width="@dimen/main_bottom_line"
+                android:layout_height="@dimen/mooc_40_dp" />
+
+            <TextView
+                android:id="@id/update_backgrounder"
+                style="@style/MyCourseShareTextStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:padding="@dimen/mooc_4_dp"
+                android:text="@string/update_backgrounder" 
+                android:textColor="@android:color/black" 
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

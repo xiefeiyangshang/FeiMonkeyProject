@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/default_color" >
+
+    <LinearLayout
+        android:id="@id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="@dimen/mooc_276_dp"
+            android:layout_height="@dimen/mooc_34_dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/myblog"
+                android:layout_width="92dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/chat_pagerview_off_left"
+                android:gravity="center"
+                android:text="我的日志"
+                android:textColor="@color/theme_color"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/theme_color" />
+
+                <TextView
+                    android:id="@+id/hotblog"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:background="@drawable/rectangle"
+                    android:gravity="center"
+                    android:text="热门日志"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/theme_color" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/newblog"
+                android:layout_width="92dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/chat_pagerview_off_right"
+                android:gravity="center"
+                android:text="最新日志"
+                android:textColor="@color/theme_color"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/ll"
+        android:orientation="vertical" >
+
+        <include layout="@layout/line" />
+    </LinearLayout>
+
+    <com.whaty.imooc.utile.myViewPager
+        android:id="@+id/vp_blog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line"
+        android:background="#f9f9f9" />
+
+</RelativeLayout>

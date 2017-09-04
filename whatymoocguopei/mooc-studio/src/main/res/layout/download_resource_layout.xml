@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+       <com.whatyplugin.imooc.ui.view.BaseTitleView
+        android:id="@id/rl_titile"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/mooc_48_dp"
+        app:middle_title="下载资料" />
+
+
+    <RelativeLayout
+        android:id="@+id/foot_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mooc_48_dp"
+        android:layout_below="@id/title_layout" >
+
+        <ListView
+            android:id="@id/mListView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/bottom_layout"
+            android:fadingEdge="none"
+            android:footerDividersEnabled="false"
+            android:headerDividersEnabled="false"
+            android:listSelector="@android:color/transparent"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
+        <!-- 数据加载进度条 -->
+
+        <RelativeLayout
+            android:id="@id/loading_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="gone" >
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:indeterminateDrawable="@drawable/data_loading_anim" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@id/bottom_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/mooc_60_dp"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:visibility="invisible" >
+
+            <LinearLayout
+                android:id="@+id/download_all"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="@dimen/mooc_10_dp"
+                android:layout_marginLeft="@dimen/mooc_17_dp"
+                android:layout_marginRight="@dimen/mooc_17_dp"
+                android:layout_marginTop="@dimen/mooc_10_dp"
+                android:background="@color/theme_color"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tip_info"
+                    style="@style/MyCourseShareTextStyle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center"
+                    android:text="@string/download_all" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

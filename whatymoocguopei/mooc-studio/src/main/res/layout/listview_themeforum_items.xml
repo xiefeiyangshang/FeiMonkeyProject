@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@id/rl_content"
+        style="@style/wrap"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="15dp"
+        android:background="#FFFFFF" >
+
+        <RelativeLayout
+            android:id="@+id/theme_rela_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="17dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="17dp" >
+
+            <ImageView
+                android:id="@+id/theme_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:src="@drawable/forum_talk_ico" />
+
+            <TextView
+                android:id="@+id/theme_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@id/theme_img"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <!-- new 开始 -->
+
+            <TextView
+                android:id="@+id/forum_new"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="8dp"
+                android:text="new"
+                android:textColor="#EA002B"
+                android:visibility="gone" />
+            <!-- new结束 -->
+
+        </RelativeLayout>
+        <!-- 线 -->
+
+        <View
+            android:id="@+id/theme_line_1"
+            style="@style/GuidanceLineStyle"
+            android:layout_width="fill_parent"
+            android:layout_below="@id/theme_rela_title" />
+        <!-- 线结束 -->
+
+        <RelativeLayout
+            android:id="@+id/forumlist_bar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_below="@id/theme_line_1"
+            android:gravity="center_vertical" >
+
+            <LinearLayout
+                android:id="@+id/theme_count"
+                android:layout_width="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_height="wrap_content"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/theme_topic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="精华 :"
+                    android:textColor="#8C959B" />
+
+                <TextView
+                    android:id="@+id/theme_topic_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:textColor="@color/theme_color"/>
+
+                <TextView
+                    android:id="@+id/theme_reply"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="回帖 :"
+                    android:textColor="#8C959B" />
+
+                <TextView
+                    android:id="@+id/theme_reply_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:gravity="center"
+                    android:textColor="@color/theme_color" />
+
+                <TextView
+                    android:id="@+id/theme_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="最后回帖：22:15"
+                    android:textColor="#8C959B"/>
+            </LinearLayout>
+            
+            <!-- 即将开始  开始 -->
+
+            <TextView
+                android:id="@+id/theme_about_to_begin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="8dp"
+                android:text="即将开始"
+                android:textColor="#FF8400"
+                android:textSize="16sp"
+                android:visibility="gone" />
+            <!-- 即将开始     结束 -->
+            <!-- 去讨论开始 -->
+
+            <LinearLayout
+                android:id="@+id/theme_discuss"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="去讨论"
+                    android:textColor="@color/theme_color"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/homework_enter" />
+            </LinearLayout>
+
+            <!-- 去讨论end -->
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_content"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:background="@drawable/froum_trapezoid_line" />
+
+</RelativeLayout>

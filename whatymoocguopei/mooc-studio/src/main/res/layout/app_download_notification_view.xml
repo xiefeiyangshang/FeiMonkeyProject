@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/notif_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:background="#00000000" >
+
+    <ImageView
+        android:id="@+id/content_view_image"
+        android:layout_width="@dimen/mooc_40_dp"
+        android:layout_height="@dimen/mooc_40_dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/mooc_10_dp"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:src="@drawable/icon" />
+
+    <RelativeLayout
+        android:id="@+id/notify_middle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="@dimen/mooc_10_dp"
+        android:layout_marginLeft="@dimen/mooc_18_dp"
+        android:layout_marginRight="@dimen/mooc_10_dp"
+        android:layout_marginTop="@dimen/mooc_10_dp"
+        android:layout_toRightOf="@id/content_view_image"
+        android:gravity="left" >
+
+        <TextView
+            android:id="@+id/notif_name"
+            style="@style/EvaluateAnswStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name" />
+
+        <TextView
+            android:id="@+id/content_view_text1"
+            style="@style/CourseLeanedTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/notif_name" />
+
+        <ProgressBar
+            android:id="@+id/content_view_progress"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/progress_height"
+            android:layout_below="@id/content_view_text1"
+            android:max="100"
+            android:progress="0"
+            android:progressDrawable="@drawable/upgrade_seekbar_drawable"
+            android:thumb="@android:color/transparent" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/time_layout"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center"
+        android:layout_marginRight="@dimen/mooc_10_dp"
+        android:layout_marginTop="@dimen/mooc_10_dp" >
+
+        <TextView
+            android:id="@+id/cancel_update"
+            style="@style/CourseLeanedTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/notif_time"
+            android:layout_marginLeft="@dimen/mooc_10_dp"
+            android:layout_marginTop="@dimen/mooc_3_dp"
+            android:text="@string/update_download_cancel" />
+
+        <TextView
+            android:id="@+id/notif_time"
+            style="@style/CourseLeanedTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+
+</RelativeLayout>

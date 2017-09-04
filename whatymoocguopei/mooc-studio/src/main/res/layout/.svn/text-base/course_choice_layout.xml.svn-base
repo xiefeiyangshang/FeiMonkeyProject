@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <com.whatyplugin.imooc.ui.view.BaseTitleView
+            android:id="@id/rl_titile"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/mooc_48_dp" 
+            app:middle_title="课程详情"/>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/allcourse_item_bg" >
+
+            <!-- 课程图片 -->
+
+            <com.whatyplugin.base.asyncimage.MCImageView
+                android:id="@id/image"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:clickable="false"
+                android:focusable="false"
+                android:scaleType="fitXY"
+                android:src="@drawable/course_default_bg" />
+
+            <RelativeLayout
+                android:id="@id/content_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="@dimen/mooc_13_dp"
+                android:layout_marginRight="@dimen/mooc_13_dp"
+                android:layout_toRightOf="@id/image"
+                android:paddingBottom="@dimen/mooc_5_dp"
+                android:paddingTop="@dimen/mooc_10_dp" >
+
+                <!-- 课程名 -->
+
+                <TextView
+                    android:id="@id/name"
+                    style="@style/CourseNameTextStyle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/credit_img"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:maxLines="1"/>
+
+                <ImageView
+                    android:id="@+id/credit_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/course_credit" />
+
+                <!-- 主讲人 -->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="@dimen/mooc_28_dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="left|center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/main_teacher"
+                            style="@style/CourseLeanedTextStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- 学时学分 -->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="@dimen/mooc_10_dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="left|center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/time_credit"
+                            style="@style/CourseLeanedTextStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+        <!-- 课程下面小横条 -->
+
+        <RelativeLayout
+            android:id="@id/title_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/mooc_20_dp"
+            android:background="@color/choice_line_color" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/mooc_3_dp" >
+
+                <LinearLayout
+                    android:id="@id/learned_time"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/mooc_29_dp"
+                    android:layout_weight="1.0"
+                    android:gravity="left|center"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@id/right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/allcourse_learnedtime_icon" />
+
+                    <TextView
+                        android:id="@+id/start_time"
+                        style="@style/CourseLeanedTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/mooc_7_dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@id/learned_count"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/mooc_29_dp"
+                    android:layout_weight="1.0"
+                    android:gravity="right|center"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@id/left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/allcourse_learnedcount_icon" />
+
+                    <TextView
+                        android:id="@+id/choice_count"
+                        style="@style/CourseLeanedTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/mooc_7_dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+        <!-- 课程介绍详细内容 -->
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="@dimen/mooc_60_dp"
+            android:fadingEdge="none"
+            android:overScrollMode="never"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+
+                <!-- 课程简介 -->
+
+                <View
+                    style="@style/GuidanceLineStyle"
+                    android:layout_width="fill_parent" />
+
+                <LinearLayout
+                    android:id="@id/courseinfo_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/mooc_50_dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/mooc_10_dp"
+                            android:src="@drawable/chapter_now_icon" />
+
+                        <TextView
+                            android:id="@id/chapter_name"
+                            style="@style/ChapterNameTextStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/course_info_label" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@id/course_info"
+                        style="@style/SectionNameTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/mooc_12_dp" />
+                    <!-- 教师简介 -->
+
+                    <View
+                        style="@style/GuidanceLineStyle"
+                        android:layout_width="fill_parent" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/mooc_5_dp" >
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/mooc_50_dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal" >
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/mooc_10_dp"
+                                android:src="@drawable/chapter_now_icon" />
+
+                            <TextView
+                                style="@style/ChapterNameTextStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/teacher_label" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@id/teacher_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" />
+
+                        <TextView
+                            android:id="@id/no_info"
+                            style="@style/SectionNameTextStyle"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/no_teacher_info_label"
+                            android:visibility="gone" />
+                        <!-- 课程目标 -->
+
+                        <View
+                            style="@style/GuidanceLineStyle"
+                            android:layout_width="fill_parent" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingBottom="@dimen/mooc_5_dp" >
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="@dimen/mooc_50_dp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal" >
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="@dimen/mooc_10_dp"
+                                    android:src="@drawable/chapter_now_icon" />
+
+                                <TextView
+                                    style="@style/ChapterNameTextStyle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/course_target_label" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/target_layout"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical" />
+
+                            <TextView
+                                android:id="@+id/target_info"
+                                style="@style/SectionNameTextStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/mooc_12_dp"
+                                android:gravity="left" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <!-- 底部选课按钮 -->
+
+    <RelativeLayout
+        android:id="@id/choice_course"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/mooc_40_dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="@dimen/mooc_10_dp"
+        android:layout_marginLeft="@dimen/mooc_17_dp"
+        android:layout_marginRight="@dimen/mooc_17_dp"
+        android:background="@color/theme_color"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="invisible" >
+
+        <TextView
+            android:id="@+id/choice_course_text"
+            style="@style/MyCourseShareTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/choice_course" />
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="MediaController_SeekBar" parent="@android:style/Widget.SeekBar">
+        <item name="android:paddingLeft">16.0dip</item>
+        <item name="android:paddingRight">16.0dip</item>
+        <item name="android:maxHeight">13.0dip</item>
+        <item name="android:indeterminateDrawable">@drawable/scrubber_progress_horizontal_holo_dark</item>
+        <item name="android:progressDrawable">@drawable/scrubber_progress_horizontal_holo_dark</item>
+        <item name="android:minHeight">13.0dip</item>
+        <item name="android:thumb">@drawable/scrubber_control_selector_holo</item>
+        <item name="android:thumbOffset">16.0dip</item>
+    </style>
+
+    <style name="MediaController_Text">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+
+    <style name="MyCourseShareTextStyle">
+        <item name="android:textSize">@dimen/text_15_size</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="AppTheme" parent="@style/AppBaseTheme" />
+
+    <style name="LoadDialog" parent="@android:style/Theme.Dialog">
+       <item name="android:windowBackground">@drawable/exittext_round</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+    
+       <style name="AlertDialog" parent="@android:style/Theme.Dialog">
+       <item name="android:windowBackground">@drawable/alertdialog</item>
+    </style>
+    
+
+    <style name="LoginLoadDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="NetworkDialogStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="PersonDialogStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@color/person_dialog_bg</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="SectionPopwindowStyle">
+        <item name="android:windowEnterAnimation">@anim/section_push_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/section_push_bottom_out</item>
+    </style>
+
+    <style name="PopwindowStyle">
+        <item name="android:windowEnterAnimation">@anim/push_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/push_bottom_out</item>
+    </style>
+
+    <style name="VersionTextStyle">
+        <item name="android:textSize">@dimen/text_20_size</item>
+        <item name="android:textColor">@color/version_color</item>
+    </style>
+
+    <style name="PersonalNameTextStyle">
+        <item name="android:textSize">@dimen/text_22_size</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="SlidingItemTextStyle">
+        <item name="android:textSize">@dimen/text_20_size</item>
+        <item name="android:textColor">@color/sliding_item_color</item>
+    </style>
+
+    <style name="ScoreTextStyle">
+        <item name="android:textSize">@dimen/text_20_size</item>
+        <item name="android:textColor">@color/score_color</item>
+    </style>
+
+    <style name="UserNameTextStyle">
+        <item name="android:textSize">@dimen/text_18_size</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="NickNameTextStyle">
+        <item name="android:textSize">@dimen/text_18_size</item>
+        <item name="android:textColor">@color/nick_beizhu</item>
+    </style>
+
+    <style name="ChapterNameTextStyle">
+        <item name="android:textSize">@dimen/text_18_size</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="NoteNameTextStyle">
+        <item name="android:textSize">@dimen/text_16_size</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="PersonTextStyle">
+        <item name="android:textSize">@dimen/text_25_size</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="CourseNameTextStyle">
+        <item name="android:textSize">@dimen/text_15_size</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="MyIsconsendTextStyle">
+        <item name="android:textSize">@dimen/text_15_size</item>
+        <item name="android:textColor">@color/evaluate_right_color</item>
+    </style>
+
+    <style name="CourseTalkTextStyle">
+        <item name="android:textSize">@dimen/text_15_size</item>
+        <item name="android:textColor">@color/allcourse_learnedtime_color</item>
+    </style>
+
+    <style name="CourseDetialTextStyle">
+        <item name="android:textSize">@dimen/text_17_size</item>
+        <item name="android:textColor">@color/allcourse_learnedtime_color</item>
+    </style>
+
+    <style name="SettingUserNameTextStyle">
+        <item name="android:textSize">@dimen/text_17_size</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="SectionSelectNameTextStyle">
+        <item name="android:textSize">@dimen/text_15_size</item>
+        <item name="android:textColor">@color/theme_color</item>
+    </style>
+
+    <style name="TalkDetailReplyTextStyle">
+        <item name="android:textSize">@dimen/text_13_size</item>
+        <item name="android:textColor">@color/theme_color</item>
+    </style>
+
+    <style name="FriendsLableTextStyle">
+        <item name="android:textSize">@dimen/text_13_size</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="PersonalJobTextStyle">
+        <item name="android:textSize">@dimen/text_13_size</item>
+        <item name="android:textColor">@color/theme_color</item>
+    </style>
+
+    <style name="NoteDetialBottomTextStyle">
+        <item name="android:textSize">@dimen/text_15_size</item>
+        <item name="android:textColor">@color/note_detail_bottom_text_color</item>
+    </style>
+
+    <style name="SectionNameTextStyle">
+        <item name="android:textSize">@dimen/text_15_size</item>
+        <item name="android:textColor">@color/section_name_color</item>
+    </style>
+
+    <style name="SectionSizeTextStyle">
+        <item name="android:textSize">@dimen/text_15_size</item>
+        <item name="android:textColor">@color/guidance_text_color</item>
+    </style>
+
+    <style name="SlidingTitleTextStyle">
+        <item name="android:textSize">@dimen/text_20_size</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="EditHintTextStyle">
+        <item name="android:textSize">@dimen/text_18_size</item>
+        <item name="android:textColor">@color/allcourse_learnedtime_color</item>
+    </style>
+
+    <style name="DurationTextStyle">
+        <item name="android:textSize">@dimen/text_18_size</item>
+        <item name="android:textColor">@color/theme_color</item>
+    </style>
+
+    <style name="TimeTextStyle">
+        <item name="android:textSize">@dimen/text_14_size</item>
+        <item name="android:textColor">@color/time_text_color</item>
+    </style>
+
+    <style name="TimeTextStyleGreen">
+        <item name="android:textSize">@dimen/text_14_size</item>
+        <item name="android:textColor">@color/theme_color</item>
+    </style>
+
+    <style name="EvaluateQuesStyle">
+        <item name="android:textSize">@dimen/text_18_size</item>
+        <item name="android:textColor">@color/section_name_color</item>
+    </style>
+
+    <style name="EvaluateProblemStyle">
+        <item name="android:textSize">@dimen/text_17_size</item>
+        <item name="android:textColor">@color/evaluate_problem_color</item>
+    </style>
+
+    <style name="EvaluateNewAnswerStyle">
+        <item name="android:textSize">@dimen/text_17_size</item>
+        <item name="android:textColor">@color/evaluate_answer_color</item>
+    </style>
+
+    <style name="EvaluateAnswStyle">
+        <item name="android:textSize">@dimen/text_15_size</item>
+        <item name="android:textColor">@color/section_name_color</item>
+    </style>
+
+    <style name="TeacherInfoTextStyle">
+        <item name="android:textSize">@dimen/text_15_size</item>
+        <item name="android:textColor">@color/allcourse_learnedtime_color</item>
+    </style>
+
+    <style name="CourseLeanedTextStyle">
+        <item name="android:textSize">@dimen/text_11_size</item>
+        <item name="android:textColor">@color/allcourse_learnedtime_color</item>
+    </style>
+
+    <style name="SdcardSpaceTextStyle">
+        <item name="android:textSize">@dimen/text_11_size</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="CopyRightTextStyle">
+        <item name="android:textSize">@dimen/text_11_size</item>
+        <item name="android:textColor">@color/copyright_text_color</item>
+    </style>
+
+    <style name="ChangeDurationTextStyle">
+        <item name="android:textSize">@dimen/text_11_size</item>
+        <item name="android:textColor">@color/theme_color</item>
+    </style>
+
+    <style name="VideoTimeTextStyle">
+        <item name="android:textSize">@dimen/text_11_size</item>
+        <item name="android:textColor">@color/guidance_text_color</item>
+    </style>
+
+    <style name="PersonalMarkTextStyle">
+        <item name="android:textSize">@dimen/text_11_size</item>
+        <item name="android:textColor">@color/personal_mark_text_color</item>
+    </style>
+
+    <style name="GuidanceTextStyle">
+        <item name="android:textSize">@dimen/text_18_size</item>
+        <item name="android:textColor">@color/guidance_text_color</item>
+    </style>
+
+    <style name="NoNetworkTextStyle">
+        <item name="android:textSize">@dimen/text_18_size</item>
+        <item name="android:textColor">@color/nonetwork_text_color</item>
+    </style>
+
+    <style name="NewVersionTextStyle">
+        <item name="android:textSize">@dimen/text_7_size</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="LineStyle">
+        <item name="android:background">#33ffffff</item>
+        <item name="android:layout_height">@dimen/main_bottom_line</item>
+    </style>
+
+    <style name="PersonLineStyle">
+        <item name="android:background">@color/person_dialog_line</item>
+        <item name="android:layout_height">@dimen/main_bottom_line</item>
+    </style>
+
+    <style name="SwitchLineStyle">
+        <item name="android:background">@color/switch_bottom_line</item>
+        <item name="android:layout_height">@dimen/main_bottom_line</item>
+    </style>
+
+    <style name="GuidanceLineStyle">
+        <item name="android:background">@color/guidance_text_color</item>
+        <item name="android:layout_height">@dimen/main_bottom_line</item>
+    </style>
+
+    <style name="TalkDetailLineStyle">
+        <item name="android:background">@color/color_c9394a</item>
+        <item name="android:layout_height">@dimen/main_bottom_line</item>
+    </style>
+
+    <style name="ShowMoocTabsLineStyle">
+        <item name="android:background">@color/guidance_text_color</item>
+        <item name="android:layout_width">@dimen/main_bottom_line</item>
+    </style>
+
+    <style name="CourseNameTextChoiceStyle">
+        <item name="android:textSize">@dimen/text_18_size</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="CourseTeacherTextChoiceStyle">
+        <item name="android:textSize">@dimen/text_15_size</item>
+        <item name="android:textColor">#8c959b</item>
+    </style>
+
+    <style name="CourseChoicedTextStyle">
+        <item name="android:textSize">@dimen/text_12_size</item>
+        <item name="android:textColor">@color/theme_color</item>
+    </style>
+
+    <style name="wrap">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="fillx">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="filly">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+
+    <style name="fillall">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+
+    <style name="list_item_title_sty" parent="@style/wrap">
+        <item name="android:textSize">@dimen/file_list_title_text_size</item>
+        <item name="android:textColor">@color/text_color_primary</item>
+    </style>
+
+    <style name="list_item_content_sty" parent="@style/wrap">
+        <item name="android:textSize">@dimen/file_list_detail_text_size</item>
+        <item name="android:textColor">@color/text_color_secondary</item>
+    </style>
+
+    <style name="ProgressBar_bg" parent="@android:style/Widget.ProgressBar.Horizontal">
+        <item name="android:maxHeight">@dimen/progressbar_max_height</item>
+        <item name="android:minHeight">@dimen/progressbar_min_height</item>
+    </style>
+
+    <style name="dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <!-- <item name="android:windowBackground">@drawable/corner_90</item> -->
+        <!-- 背景透明 -->
+        <!-- <item name="android:windowBackground">@android:color/transparent</item> -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:windowBackground">@drawable/corner_learn</item>
+        <!-- 背景透明 -->
+    </style>
+
+    <style name="wrap_theme_text" parent="@style/wrap">
+        <item name="android:textSize">@dimen/text_15_size</item>
+        <item name="android:textColor">@color/theme_color</item>
+    </style>
+
+    <style name="around_padding_12_dp">
+        <item name="android:paddingBottom">@dimen/mooc_12_dp</item>
+        <item name="android:paddingLeft">@dimen/mooc_12_dp</item>
+        <item name="android:paddingRight">@dimen/mooc_12_dp</item>
+        <item name="android:paddingTop">@dimen/mooc_12_dp</item>
+    </style>
+
+    <style name="homework_title_style" parent="@style/wrap">
+        <item name="android:textSize">@dimen/text_20_size</item>
+        <item name="android:textColor">#252525</item>
+    </style>
+
+    <style name="homework_content_style" parent="@style/wrap">
+        <item name="android:textSize">@dimen/text_18_size</item>
+        <item name="android:textColor">#8c959b</item>
+        <item name="android:lineSpacingExtra">12dp</item>
+    </style>
+
+    <style name="homework_time_style" parent="@style/wrap">
+        <item name="android:textSize">@dimen/text_14_size</item>
+        <item name="android:textColor">#8c959b</item>
+    </style>
+
+    <style name="test_desc_text">
+         <item name="android:textSize">19sp</item>
+        <item name="android:textColor">@color/theme_color</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        
+        <item name="android:drawablePadding">5dip</item>
+        <item name="android:drawableLeft">@drawable/test_green_point</item>
+    </style>
+
+    <style name="test_desc_value">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item> <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="dialog_message_content" parent="@style/fillx">
+        <item name="android:gravity">center</item>
+        <item name="android:minHeight">100dp</item>
+        <item name="android:paddingBottom">30dp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingTop">30dp</item>
+        <item name="android:textColor">#666666</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    
+     <style name="common_dialog_message_content" parent="@style/fillx">
+        <item name="android:minHeight">70dp</item>
+        <item name="android:paddingBottom">20dp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingTop">20dp</item>
+        <item name="android:textColor">#666666</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    
+    <style name="dialog_message_button" parent="@style/fillx">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@color/theme_color</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    
+    <style name="common_dialog_message_button" parent="@style/fillx"> 
+        <item name="android:gravity">center</item>     
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item> 
+        <item name="android:background">@drawable/common_dialog_btn</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    
+    <style name="over_time_tip_style" parent="@style/fillx">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@color/text_color_gray</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    
+    <style name="sfp_item_name" parent="@style/wrap">
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    <style name="sfp_item_current_name" parent="@style/wrap">
+        <item name="android:textColor">@color/theme_color</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    <style name="SelectStyle">
+        <item name="android:background">@color/theme_color</item>
+        <item name="android:layout_height">1dp</item>
+    </style>
+    <style name="DialogShowStyle" parent="android:Animation">          
+          <item name="@android:windowEnterAnimation">@anim/dialog_pop_anim</item>  //进入时的动画   
+        <item name="@android:windowExitAnimation">@anim/dialog_quit_anim</item>    //退出时的动画   
+    </style>
+    
+    <style name="DialogOpenOtherUrl"  parent="android:Animation">
+         <item name="@android:windowEnterAnimation">@anim/open_other_url_in</item>  //进入时的动画   
+        <item name="@android:windowExitAnimation">@anim/open_other_url_out</item>    //退出时的动画   
+    </style>
+
+    <style name="adTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:background">@color/ad_color</item>
+        <item name="android:padding">3dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="playBottomTextViewStyle" parent="android:Widget.Holo.Light.TextView">
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+    <style name="rbStyle">
+        <!-- <item name="android:background">@drawable/play_rb_bg</item> -->
+        <item name="android:button">@null</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:textColor">@drawable/play_rb_textcolor</item>
+        <item name="android:textSize">12sp</item>
+
+    </style>
+</resources>
