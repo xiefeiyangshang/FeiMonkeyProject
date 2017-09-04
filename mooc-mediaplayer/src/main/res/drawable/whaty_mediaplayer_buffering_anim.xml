@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-rotate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/player_buffering_bg"
+    android:pivotX="50.0%"
+    android:pivotY="50.0%" />
+ <!-- From: file:/D:/jinmingli_workdir/WhatyMediaPlayer/whaty_media_player/src/main/res/drawable/whaty_mediaplayer_buffering_anim.xml -->

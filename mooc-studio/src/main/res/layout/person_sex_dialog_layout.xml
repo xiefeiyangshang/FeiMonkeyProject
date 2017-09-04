@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="@dimen/mooc_300_dp" android:layout_height="wrap_content">
+        <TextView android:gravity="center" android:id="@id/text1" android:layout_width="fill_parent" android:layout_height="@dimen/mooc_50_dp" style="@style/PersonTextStyle" />
+        <View android:layout_width="fill_parent" style="@style/PersonLineStyle" />
+        <TextView android:gravity="center" android:id="@id/text2" android:layout_width="fill_parent" android:layout_height="@dimen/mooc_50_dp" style="@style/PersonTextStyle" />
+    </LinearLayout>
+</LinearLayout>

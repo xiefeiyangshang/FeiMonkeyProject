@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="214.0dip" >
+
+        <ImageView
+            android:id="@id/color_bg"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/mooc_152_dp"
+            android:layout_marginTop="@dimen/mooc_65_dp"
+            android:background="@color/theme_color" />
+
+        <com.whatyplugin.base.asyncimage.MCImageView
+            android:id="@id/image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:clickable="false"
+            android:focusable="false"
+            android:scaleType="fitXY"
+            android:src="@drawable/personal_default_user_icon" />
+
+        <RelativeLayout
+            android:id="@id/from_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/mooc_15_dp"
+            android:layout_marginTop="@dimen/mooc_88_dp"
+            android:layout_toRightOf="@id/image" >
+
+            <TextView
+                android:id="@id/from_tv"
+                style="@style/SdcardSpaceTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true" />
+
+            <TextView
+                android:id="@id/job_tv"
+                style="@style/PersonalJobTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/from_tv"
+                android:layout_marginTop="@dimen/mooc_10_dp"
+                android:background="@drawable/personal_job_bg"
+                android:gravity="center"
+                android:singleLine="true"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@id/infos_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/color_bg"
+            android:layout_below="@id/from_layout"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:id="@id/name_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:background="@color/personal_center_bg"
+                android:paddingBottom="@dimen/mooc_5_dp"
+                android:paddingLeft="@dimen/mooc_13_dp"
+                android:paddingRight="@dimen/mooc_13_dp"
+                android:paddingTop="@dimen/mooc_3_dp" >
+
+                <TextView
+                    android:id="@id/name_tv"
+                    style="@style/PersonalNameTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/mooc_10_dp"
+                    android:drawablePadding="@dimen/mooc_10_dp"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:id="@id/mark_tv"
+                    style="@style/PersonalMarkTextStyle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/name_tv"
+                    android:layout_marginTop="@dimen/mooc_5_dp"
+                    android:singleLine="true"
+                    android:text="@string/about_me_tip" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="2.0" >
+
+                <ImageView
+                    android:id="@id/sex_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/personal_gender_bg" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="2.0"
+                android:background="@color/personal_edit_backgroud_color" >
+
+                <ImageView
+                    android:id="@id/edit_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/personal_edit_bg" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

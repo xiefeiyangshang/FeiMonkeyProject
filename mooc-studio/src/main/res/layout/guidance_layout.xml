@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@id/guidance_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@id/guidance_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/no_course_icon" />
+
+            <TextView
+                android:id="@id/guidance_label"
+                style="@style/GuidanceTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/mooc_19_dp"
+                android:gravity="center_horizontal" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:id="@id/nonetwork_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/nonetwork_bg_color"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@id/download_tv"
+                    style="@style/NoNetworkTextStyle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/mooc_12_dp"
+                    android:paddingTop="@dimen/mooc_12_dp"
+                    android:text="@string/download" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/nonetowrk_line" />
+
+                <TextView
+                    android:id="@id/reload_tv"
+                    style="@style/NoNetworkTextStyle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/mooc_12_dp"
+                    android:paddingTop="@dimen/mooc_12_dp"
+                    android:text="@string/allcourse_reload_label" />
+            </LinearLayout>
+
+            <View
+                style="@style/GuidanceLineStyle"
+                android:layout_width="fill_parent"
+                android:layout_above="@id/nonetwork_layout" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 主题色， 根据需要设置成自己项目想要的 -->
+    <color name="theme_color">#ffe83535</color>
+    <!-- 登陆时的灰色 -->
+    <color name="gray_color">#AFAFAF</color>
+    <!-- 淡色的确认框 -->
+    <color name="thin_themecolor">#50e83535</color>
+    <color name="textcolor">#ff000000</color>
+
+</resources>

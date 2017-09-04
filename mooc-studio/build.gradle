@@ -1,0 +1,20 @@
+apply plugin: 'com.android.library'
+apply from: rootProject.getRootDir().getAbsolutePath() + "/utils.gradle"
+dependencies {
+    compile 'com.android.support:support-v4:22.1.0'
+    compile project(':mooc-mediaplayer')
+
+    compile 'com.tencent.bugly:crashreport:latest.release'
+
+    //添加友盟
+    compile 'com.umeng.analytics:analytics:latest.integration'
+
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile files('libs/ccsdk.jar')
+    compile files('libs/ijkjava.jar')
+    compile files('libs/org.apache.http.legacy.jar')
+    //添加友盟
+}
+android {
+    buildToolsVersion '25.0.0'
+}

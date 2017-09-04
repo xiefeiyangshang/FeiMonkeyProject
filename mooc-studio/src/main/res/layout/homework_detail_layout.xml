@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/fillall" >
+
+    <com.whatyplugin.imooc.ui.view.BaseTitleView
+        android:id="@id/rl_titile"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/mooc_48_dp"
+        app:middle_title="作业详情"
+        app:righttext="@string/submit" />
+
+    <ScrollView
+        style="@style/filly"
+        android:layout_below="@id/title_layout"
+        android:layout_marginTop="@dimen/mooc_48_dp" >
+
+        <RelativeLayout style="@style/fillall" >
+
+            <RelativeLayout
+                android:id="@+id/top_content"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/mooc_12_dp"
+                android:paddingRight="@dimen/mooc_12_dp"
+                android:paddingTop="@dimen/mooc_12_dp" >
+
+                <ImageView
+                    android:id="@+id/status_img"
+                    style="@style/wrap"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/homework_left_green" />
+
+                <TextView
+                    android:id="@+id/content_label"
+                    style="@style/homework_title_style"
+                    android:paddingLeft="@dimen/mooc_22_dp" />
+
+                <ImageView
+                    android:id="@+id/time_img"
+                    style="@style/wrap"
+                    android:layout_below="@id/content_label"
+                    android:paddingLeft="@dimen/mooc_22_dp"
+                    android:paddingTop="@dimen/mooc_15_dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/homework_time" />
+
+                <TextView
+                    android:id="@+id/time_label"
+                    style="@style/homework_content_style"
+                    android:layout_below="@id/content_label"
+                    android:layout_toRightOf="@id/time_img"
+                    android:paddingLeft="@dimen/mooc_12_dp"
+                    android:paddingTop="@dimen/mooc_12_dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/time_label"
+                    android:orientation="vertical"
+                    android:paddingLeft="22dp"
+                    android:paddingTop="@dimen/mooc_12_dp" >
+
+                    <WebView
+                        android:id="@+id/detail_label"
+                        style="@style/homework_content_style" />
+                </LinearLayout>
+
+                <com.whatyplugin.imooc.ui.view.ScoreWithPicView
+                    android:id="@+id/score_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/middle_line"
+                style="@style/GuidanceLineStyle"
+                android:layout_width="fill_parent"
+                android:layout_below="@id/top_content" />
+
+            <RelativeLayout
+                android:id="@+id/self_content"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/middle_line"
+                android:padding="@dimen/mooc_12_dp" >
+
+                <TextView
+                    android:id="@+id/over_time_tip"
+                    style="@style/over_time_tip_style"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/selfanswer_label"
+                    style="@style/wrap_theme_text"
+                    android:text="你的答案：" />
+
+                <Button
+                    android:id="@+id/redo"
+                    style="@style/wrap"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/button_bg"
+                    android:text="重做"
+                    android:textColor="@color/theme_color"
+                    android:textSize="14sp"
+                    android:visibility="invisible" >
+                </Button>
+
+                <WebView
+                    android:id="@+id/answer_label"
+                    style="@style/wrap"
+                    android:layout_below="@id/selfanswer_label"
+                    android:layout_marginTop="@dimen/mooc_12_dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/teacher_content"
+                style="@style/around_padding_12_dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/self_content"
+                android:background="#ffffff"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:id="@+id/teacheranswer_img"
+                    style="@style/wrap"
+                    android:layout_marginTop="2dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/homework_teacher_comments" />
+
+                <TextView
+                    android:id="@+id/tjtime_label"
+                    style="@style/wrap_theme_text"
+                    android:layout_toRightOf="@id/teacheranswer_img"
+                    android:paddingLeft="@dimen/mooc_10_dp"
+                    android:text="教师评语：" />
+
+                <TextView
+                    android:id="@+id/teacher_comments_lable"
+                    style="@style/wrap"
+                    android:layout_below="@id/tjtime_label"
+                    android:layout_toRightOf="@id/teacheranswer_img"
+                    android:paddingLeft="@dimen/mooc_10_dp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

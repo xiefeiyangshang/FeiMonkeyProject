@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mooc="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <com.whatyplugin.imooc.ui.view.BaseTitleView
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/mooc_48_dp"
+        mooc:middle_title="@string/note_title"
+        mooc:rightimgicon="@drawable/search"
+        mooc:rightimgvisible="true"
+        mooc:righttextvisible="false"
+        android:id="@id/rl_titile"
+        />
+    
+    <LinearLayout android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/rl_titile"
+        android:layout_margin="13dp"
+        android:id="@id/ll_tab"
+        android:orientation="horizontal">
+        <TextView android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:text="@string/note_title"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:id="@id/tv_gxnote"
+            android:background="@drawable/chat_pagerview_on_left"/>
+        <TextView android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:text="@string/note_title_my"
+            android:gravity="center"
+            android:id="@id/tv_mynote"
+            android:textColor="@color/theme_color"
+            android:background="@drawable/chat_pagerview_off_right"/>
+    </LinearLayout>
+
+    <TextView android:layout_width="fill_parent"
+        android:layout_height="0.7dp"
+        android:layout_below="@id/ll_tab"
+        android:id="@id/tv_line"
+        android:background="@color/line_color"/>
+    <android.support.v4.view.ViewPager
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tv_line"
+        android:id="@id/vp_note"
+        />
+
+
+</RelativeLayout>

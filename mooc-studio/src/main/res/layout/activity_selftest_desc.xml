@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   	xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.whatyplugin.imooc.ui.view.BaseTitleView
+        android:id="@id/rl_titile"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/mooc_48_dp"
+        app:middle_title="自测" />
+
+    <ScrollView
+        style="@style/fillx"
+        android:layout_above="@id/bt_start" 
+        android:layout_below="@id/rl_titile" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:id="@id/rl_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/test_desc_text"
+                    android:text="标        题： " />
+                <!-- 测试 一 玉雕于玉器 -->
+
+                <TextView
+                    android:id="@id/tv_title"
+                    style="@style/test_desc_value"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@id/rl_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_title"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/test_desc_text"
+                    android:text="测试时间： " />
+                <!-- 2015.05.01 - 2015.05.05 -->
+
+                <TextView
+                    android:id="@id/tv_time"
+                    style="@style/test_desc_value"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@id/rl_limit_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_time"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    style="@style/test_desc_text"
+                    android:text="自测时长： " />
+                <!-- 30分钟 -->
+
+                <TextView
+                    android:id="@id/tv_limit_time"
+                    style="@style/test_desc_value"
+                    android:text="" />
+            </LinearLayout>
+
+            <View
+                android:id="@id/view_line"
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_below="@id/rl_limit_time"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/st_line" >
+            </View>
+
+            <RelativeLayout
+                android:id="@id/rl_relation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_line"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp" >
+
+                <TextView
+                    android:id="@id/tv_relation_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/test_grey_point"
+                    android:drawablePadding="8dp"
+                    android:text="关联的知识点"
+                    android:textColor="#666666"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@id/tv_relation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_relation_title"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="12dp"
+                    android:textColor="#8E979C"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_relation"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp" >
+
+                <TextView
+                    android:id="@id/tv_constitute_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/test_grey_point"
+                    android:drawablePadding="8dp"
+                    android:text="题目构成"
+                    android:textColor="#666666"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@id/tv_constitute"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_constitute_title"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="12dp"
+                    android:textColor="#8E979C"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@id/bt_start"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:background="@color/theme_color"
+        android:text="开始测试"
+        android:textColor="#FFFFFF"
+        android:textSize="17sp" />
+
+</RelativeLayout>

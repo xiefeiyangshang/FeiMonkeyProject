@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@drawable/alertdialog"
+              android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/loading_dialog"
+        android:layout_height="@dimen/mooc_130_dp"
+        android:layout_width="@dimen/mooc_130_dp"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@id/loading_pic"
+            style="@style/wrap"
+            android:layout_marginTop="@dimen/mooc_20_dp"
+
+            android:layout_gravity="center"
+            android:src="@drawable/loading_pic" >
+        </ImageView>
+
+        <TextView
+            android:id="@id/content"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/mooc_15_dp"
+
+            android:textSize="@dimen/text_18_size"
+            android:textColor="#666666"
+            />
+        <!--   <item name="android:minHeight">100dp</item>
+        <item name="android:paddingBottom">30dp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingTop">30dp</item>-->
+    </LinearLayout>
+
+</LinearLayout>

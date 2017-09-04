@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f9f9f9" >
+
+    <com.whatyplugin.imooc.ui.view.BaseTitleView
+        android:id="@id/rl_titile"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/mooc_48_dp"
+        app:middle_title="添加答案"
+        app:righttext="@string/submit" />
+
+    <ScrollView
+        android:id="@+id/scorll_view"
+        style="@style/wrap"
+        android:layout_below="@id/title_layout"
+        android:layout_marginTop="@dimen/mooc_48_dp"
+        android:paddingBottom="@dimen/mooc_55_dp" >
+
+        <RelativeLayout style="@style/fillx" >
+
+            <LinearLayout
+                android:id="@+id/linear_sendAnswer"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mooc_45_dp"
+                android:layout_below="@id/title_layout"
+                android:focusable="true"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:id="@+id/top_content"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#e5e5e5"
+                    android:paddingTop="@dimen/mooc_7_dp" >
+
+                    <ImageView
+                        android:id="@+id/status_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="@dimen/mooc_7_dp"
+                        android:background="@drawable/homework_status_bg"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:id="@+id/title"
+                        style="@style/homework_content_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/status_img"
+                        android:ellipsize="end"
+                        android:paddingBottom="@dimen/mooc_12_dp"
+                        android:paddingLeft="@dimen/mooc_12_dp"
+                        android:paddingRight="@dimen/mooc_12_dp"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="#616161"
+                        android:textSize="@dimen/text_18_size" />
+
+                    <TextView
+                        android:id="@id/tv_line"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.7dp"
+                        android:layout_below="@id/title"
+                        android:background="@color/line_color" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_desc"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linear_sendAnswer"
+                android:paddingLeft="@dimen/normal_margin"
+                android:text=""
+                android:textColor="#afafaf"
+                android:textSize="15.75sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/et_desc"
+                android:layout_below="@+id/et_desc"
+                android:layout_marginTop="5dp"
+                android:text="0/400"
+                android:textColor="#afafaf"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/et_desc"
+                android:layout_width="fill_parent"
+                android:layout_height="190dp"
+                android:layout_below="@+id/tv_desc"
+                android:layout_marginLeft="@dimen/normal_margin"
+                android:layout_marginRight="@dimen/normal_margin"
+                android:layout_marginTop="5dp"
+                android:background="@null"
+                android:ems="5"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="top"
+                android:hint="请输入问题描述(最少十个字哦)"
+                android:paddingLeft="@dimen/normal_margin"
+                android:paddingTop="10dp"
+                android:textColor="#4f4f4f"
+                android:textColorHint="#afafaf"
+                android:textCursorDrawable="@null"
+                android:textSize="18sp" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/pic_linearlayout"
+        style="@style/fillx"
+        android:layout_below="@id/scorll_view"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/mooc_20_dp"
+        android:paddingRight="@dimen/mooc_20_dp" >
+    </LinearLayout>
+
+    <com.whatyplugin.imooc.ui.view.ChoicePicFromLocalView
+        android:id="@+id/pic_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+    </com.whatyplugin.imooc.ui.view.ChoicePicFromLocalView>
+
+</RelativeLayout>

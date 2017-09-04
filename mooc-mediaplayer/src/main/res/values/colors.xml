@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 主题色， 根据需要设置成自己项目想要的 -->
+    <color name="theme_color">#ffe83535</color>
+
+</resources>

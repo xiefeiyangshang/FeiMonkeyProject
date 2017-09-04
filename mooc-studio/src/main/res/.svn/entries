@@ -1,0 +1,64 @@
+10
+
+dir
+2427
+svn://svn.whaty.com/xmkfb/apps/whatymoocguopei/trunk/mooc-studio/src/main/res
+svn://svn.whaty.com/xmkfb
+
+
+
+2017-08-31T03:37:15.072637Z
+2427
+wangyabin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+db0c8573-406a-4f3e-8ec1-2eeebe9d876a
+
+anim
+dir
+
+drawable
+dir
+
+drawable-hdpi
+dir
+
+drawable-ldpi
+dir
+
+drawable-mdpi
+dir
+
+drawable-xhdpi
+dir
+
+drawable-xxhdpi
+dir
+
+layout
+dir
+
+values
+dir
+
+values-sw720dp-land
+dir
+
+values-v11
+dir
+
+values-v14
+dir
+

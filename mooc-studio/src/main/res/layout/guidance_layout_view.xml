@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/default_color" >
+
+    <LinearLayout
+        android:id="@id/guidance_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingTop="100dp"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@id/guidance_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/no_course_icon" />
+
+        <TextView
+            android:id="@id/guidance_label"
+            style="@style/GuidanceTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mooc_19_dp"
+            android:gravity="center_horizontal"
+            android:text="暂无课程" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@id/loading_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center" >
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateDrawable="@drawable/data_loading_anim" />
+    </LinearLayout>
+
+</RelativeLayout>

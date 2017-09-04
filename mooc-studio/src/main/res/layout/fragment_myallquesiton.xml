@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f9f9f9"
+    android:orientation="vertical" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.whatyplugin.imooc.ui.view.BaseTitleView
+        android:id="@id/rl_titile"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/mooc_48_dp" 
+        app:rightimgicon="@drawable/search"
+        />
+
+    <LinearLayout
+        android:id="@id/ll_tab"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/text_60_size"
+        android:layout_below="@id/rl_titile"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/text_22_size"
+            android:layout_marginRight="@dimen/text_9_size"
+            android:src="@drawable/ico_book" />
+
+        <TextView
+            android:id="@id/course_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textColor="#ff616161"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@id/tv_line"
+        android:layout_width="fill_parent"
+        android:layout_height="0.7dp"
+        android:layout_below="@id/ll_tab"
+        android:background="@color/line_color" />
+
+    <com.whatyplugin.uikit.refreshview.MCPullToRefreshView
+        android:id="@id/mListView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/tv_line" />
+
+</RelativeLayout>

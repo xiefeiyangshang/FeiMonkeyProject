@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<level-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:drawable="@drawable/chapter_video_type"
+        android:maxLevel="0"/>
+    <item
+        android:drawable="@drawable/chapter_resource_type"
+        android:maxLevel="1"/>
+    <item
+        android:drawable="@drawable/chapter_programme_type"
+        android:maxLevel="2"/>
+    <item
+        android:drawable="@drawable/chapter_link_type"
+        android:maxLevel="3"/>
+    <item
+        android:drawable="@drawable/chapter_doc_type"
+        android:maxLevel="4"/>
+    <item
+        android:drawable="@drawable/chapter_courseware_type"
+        android:maxLevel="5"/>
+    <item
+        android:drawable="@drawable/chapter_homework_type"
+        android:maxLevel="6"/>
+    <item
+        android:drawable="@drawable/chapter_topic_type"
+        android:maxLevel="7"/>
+    <item
+        android:drawable="@drawable/chapter_evaluation_type"
+        android:maxLevel="8"/>
+   
+</level-list>

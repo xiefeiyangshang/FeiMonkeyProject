@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/assessment_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:text="1.课程学习"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/assessment_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="自主选学，观看视频课程、阅读课程文本资料，要求达到2160分钟（48学时，占网络研修总学时80学时的60%）"
+        android:textColor="#696969"
+        android:textSize="18sp" />
+
+    <View
+        android:id="@id/view_line"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#cdcdcd" />
+
+</LinearLayout>

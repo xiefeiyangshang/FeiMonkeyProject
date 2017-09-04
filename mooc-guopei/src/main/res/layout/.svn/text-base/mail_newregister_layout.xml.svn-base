@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <com.whatyplugin.imooc.ui.view.BaseTitleView
+        android:id="@id/rl_titile"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/mooc_48_dp"
+        android:layout_alignParentTop="true"
+        app:middle_title="@string/regist_title" />
+
+    <RelativeLayout
+        android:id="@id/email"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/mooc_50_dp"
+        android:layout_below="@id/rl_titile"
+        android:paddingLeft="@dimen/mooc_17_dp"
+        android:paddingRight="@dimen/mooc_17_dp"
+         >
+
+        <ImageView
+            android:id="@id/email_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/mooc_7_dp"
+            android:src="@drawable/newlogin_email_icon" />
+
+        <EditText
+            android:id="@id/email_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/mooc_40_dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/mooc_20_dp"
+            android:layout_marginRight="@dimen/mooc_47_dp"
+            android:layout_toRightOf="@id/email_image"
+            android:background="@color/edittext_bg"
+            android:hint="@string/register_hinttip_email"
+            android:inputType="textEmailAddress"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/allcourse_learnedtime_color"
+            android:textSize="@dimen/text_15_size" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/main_bottom_line"
+            android:layout_alignParentBottom="true"
+            android:background="@color/edittext_hint_color" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@id/password"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/mooc_50_dp"
+        android:layout_below="@id/email"
+        android:paddingLeft="@dimen/mooc_17_dp" 
+        android:paddingRight="@dimen/mooc_17_dp"
+        >
+
+        <ImageView
+            android:id="@id/password_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/mooc_10_dp"
+            android:src="@drawable/newlogin_password_icon" />
+
+        <EditText
+            android:id="@id/password_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/mooc_40_dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/mooc_22_dp"
+            android:layout_marginRight="@dimen/mooc_47_dp"
+            android:layout_toRightOf="@id/password_image"
+            android:background="@color/edittext_bg"
+            android:hint="@string/register_hinttip_password"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/allcourse_learnedtime_color"
+            android:textSize="@dimen/text_15_size" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/main_bottom_line"
+            android:layout_alignParentBottom="true"
+            android:background="@color/edittext_hint_color" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@id/over"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/mooc_40_dp"
+        android:layout_below="@id/password"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/mooc_17_dp"
+        android:layout_marginRight="@dimen/mooc_17_dp"
+        android:layout_marginTop="@dimen/mooc_47_dp"
+        android:background="@color/theme_color"
+        android:text="@string/register_over"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_18_size" />
+
+</RelativeLayout>

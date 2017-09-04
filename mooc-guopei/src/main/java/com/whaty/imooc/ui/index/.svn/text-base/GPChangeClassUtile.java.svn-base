@@ -1,0 +1,37 @@
+package com.whaty.imooc.ui.index;
+
+import android.app.Activity;
+
+import com.whaty.imooc.ui.login.ChangClassDiag;
+import com.whaty.imooc.utile.GPContants;
+import com.whaty.imooc.utile.SharedClassInfo;
+import com.whatyplugin.base.dialog.MCCreateDialog;
+
+public class GPChangeClassUtile {
+
+	public static boolean isChandClass() {
+		return SharedClassInfo.getKeyValue(GPContants.USER_PROJECTID).equals("");
+	}
+
+	public static boolean noClass() {
+		return SharedClassInfo.getKeyValue(GPContants.USER_PROJECTID_1).equals("") && SharedClassInfo.getKeyValue(GPContants.USER_PROJECTID_2).equals("");
+	}
+	public static void createDialog(Activity ac) {
+		ChangClassDiag changClassDiag = new ChangClassDiag();
+		changClassDiag.show(MCCreateDialog.getFragmentTransaction(ac), "changclass");
+	}
+
+	public static String getClassName() {
+		return SharedClassInfo.getKeyValue(GPContants.USER_BANJINAME);
+	}
+
+	public static boolean StuHaveOneClass() {
+		return SharedClassInfo.getKeyValue(GPContants.USER_ONLYHAVEONECLASS).equals("true");
+	}
+
+	// 1是有效学习
+	public static Boolean isStatuName() {
+		return SharedClassInfo.getKeyValue(GPContants.USER_STATUSNAME).equals("1");
+	}
+
+}

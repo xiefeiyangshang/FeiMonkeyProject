@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ECECEC"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+    <com.whatyplugin.imooc.ui.view.BaseTitleView
+        android:id="@id/rl_titile"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/mooc_48_dp"
+        />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/mooc_48_dp"
+            android:layout_below="@id/title_layout" 
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <android.support.v4.view.ViewPager
+                android:id="@id/test_vp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="438"
+                />
+
+            <RelativeLayout
+                android:id="@id/bottom_layout"
+                android:layout_width="match_parent"
+                android:layout_height="50dip" 
+                android:background="#E5E5E5" >
+
+                <TextView
+                    android:id="@id/tv_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#8e8e8e"
+                    android:text="0/0" />
+
+                <TextView
+                    android:id="@id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dip"
+                    android:visibility="invisible"
+                    android:text="倒计时: 00:00:00"
+                    android:textColor="@color/theme_color" />
+            </RelativeLayout>
+        </LinearLayout>
+        
+        <ProgressBar
+  	    android:id="@id/pb"
+  	      android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:indeterminateDrawable="@drawable/data_loading_anim" />
+    </RelativeLayout>
+
+    <include layout="@layout/include_guide_show"/>
+
+</FrameLayout>

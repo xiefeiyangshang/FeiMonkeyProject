@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <com.whatyplugin.imooc.ui.view.BaseTitleView
+        android:id="@id/rl_titile"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/mooc_48_dp"
+        app:middle_title="@string/download_title_label"
+        app:righttext="@string/download_edit_label" />
+
+    <LinearLayout
+        android:id="@id/bottom_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <View
+            style="@style/GuidanceLineStyle"
+            android:layout_width="fill_parent" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/nonetwork_bg_color"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@id/checkedAll_tv"
+                style="@style/NoNetworkTextStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:paddingBottom="@dimen/mooc_12_dp"
+                android:paddingTop="@dimen/mooc_12_dp"
+                android:text="@string/chapter_download_checkedall" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/nonetowrk_line" />
+
+            <TextView
+                android:id="@id/delete_tv"
+                style="@style/NoNetworkTextStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:paddingBottom="@dimen/mooc_12_dp"
+                android:paddingTop="@dimen/mooc_12_dp"
+                android:text="@string/download_edit_delete" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ListView
+        android:id="@id/mListView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/bottom_layout"
+        android:layout_below="@id/title_layout"
+        android:layout_marginTop="@dimen/mooc_48_dp"
+        android:fadingEdge="none"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:listSelector="@android:color/transparent"
+        android:overScrollMode="never"
+        android:scrollbars="none" />
+
+</RelativeLayout>

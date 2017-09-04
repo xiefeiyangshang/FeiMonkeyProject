@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/default_color"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingBottom="17dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="11dp"
+        android:paddingTop="17dp" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="我的国培22222222222222222222222222222222222222情节"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp" >
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2015.06.07 22:44"
+                android:textColor="#9d9d9d"
+                android:textSize="11sp" />
+
+            <ImageView
+                android:id="@+id/like_blog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="36dp"
+                android:layout_marginTop="2dp"
+                android:layout_toRightOf="@id/time"
+                android:src="@drawable/new_ico_like" />
+
+            <TextView
+                android:id="@+id/like_blog_num"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/like_blog"
+                android:ellipsize="end"
+                android:gravity="left|center"
+                android:singleLine="true"
+                android:text="92"
+                android:textColor="#3c3939"
+                android:textSize="11sp" />
+
+            <ImageView
+                android:id="@+id/watch_blog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="2dp"
+                android:layout_toRightOf="@id/like_blog_num"
+                android:src="@drawable/new_ico_view" />
+
+            <TextView
+                android:id="@+id/watch_num"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/watch_blog"
+                android:ellipsize="end"
+                android:gravity="center|left"
+                android:singleLine="true"
+                android:text="36999"
+                android:textColor="#3c3939"
+                android:textSize="11sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/workshop" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <include layout="@layout/line" />
+
+</LinearLayout>
