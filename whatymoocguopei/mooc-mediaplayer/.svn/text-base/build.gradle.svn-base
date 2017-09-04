@@ -1,8 +1,0 @@
-apply plugin: 'com.android.library'
-apply from: rootProject.getRootDir().getAbsolutePath() + "/utils.gradle"
-dependencies {
-    compile 'com.android.support:support-v4:22.1.0'
-}
-android {
-    buildToolsVersion '25.0.0'
-}

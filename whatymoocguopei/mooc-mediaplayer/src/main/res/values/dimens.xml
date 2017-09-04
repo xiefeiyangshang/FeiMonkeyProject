@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-
-    <dimen name="player_30_dp">30dp</dimen>
-    <dimen name="player_60_dp">60dp</dimen>
-
-</resources>
